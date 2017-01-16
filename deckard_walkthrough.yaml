@@ -1,0 +1,96 @@
+# Deckard.ai documentation of universe (open.ai)
+# To add a new one, go to:
+# https://github.com/deckardai/deckard-walkthrough
+# To view it, go to (and download the app from the site):
+# https://assist.deckard.ai
+
+doc: |
+  Documentation of universe.
+
+doc/env_semantics.rst: |
+  Environment semantics. Universe environments differ from other
+  Gym environments in that the environment keeps running in
+  real-time, even when the agent does not call step.
+
+doc/remotes.rst: |
+  Remotes. Since the remote part of the environment runs in its
+  own server process, managing remotes is an important task. The
+  remote can run anywhere - locally, or in the cloud.
+
+doc/protocols.rst: |
+  Internal communication protocols. A Universe environment consists
+  of two components that run in separate processes and communicate
+  over the network. The agent's machine runs the environment client
+  code, which connects to the remote environment server.
+
+example: |
+  Examples.
+
+example/diagnostic-agent: |
+  Diagnostic agent example.
+
+example/random-agent: |
+  Random agent example.
+
+example/recorders: |
+  Recorders example.
+
+example/starter-cluster: |
+  Starter cluster example.
+
+example/system-diagnostics: |
+  System diagnostics example.
+
+tests: |
+  Tests.
+
+tests/functional: |
+  Functional tests.
+
+tests/functional/test_core_envs_semantics.py: |
+  Tests of environment semantics.
+
+tests/functional/test_envs.py: |
+  Test of environments (flashgames.DuskDrive-v0,internet.SlitherIO-v0, etc.).
+
+universe: |
+  Main project directory.
+
+universe/envs: |
+  Environments. Inlucdes: VNC Flashgames, VNC GTA V, VNC Starcraft etc.
+
+universe/envs/diagnostics.py: |
+  Diagnostics.
+
+universe/envs/vnc_flashgames.py: |
+  Flash game environment.
+
+universe/envs/vnc_starcraft.py: |
+  Starcraft environment.
+
+universe/envs/vnc_gtav.py: |
+  GTA V environment.
+
+universe/remotes: |
+  Remotes (docker remotes, health checks etc.)
+
+universe/rewarder: |
+  Rewarders.
+
+universe/spaces: |
+  Spaces (action and observation spaces).
+
+universe/utils: |
+  Utilities.
+
+universe/vncdriver: |
+  VNC driver.
+
+universe/configuration.py: |
+  Configuration file.
+
+universe/error.py: |
+  Error classes.
+
+universe/wrappers: |
+  Wrappers (core, loggin, monitoring, recording, rendering, etc.).
